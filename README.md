@@ -174,9 +174,6 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 ## STM 32 CUBE PROGRAM :
 ```
-NAME: YENUGANTI PRATHYUSHA
-REF NO:212223240187
-```
 #include "main.h"
 #include "lcd.h"
 
@@ -193,7 +190,7 @@ int main(void)
   Lcd_HandleTypeDef lcd;
   lcd = Lcd_create(ports, pins, GPIOB, GPIO_PIN_0, GPIOB, GPIO_PIN_1, LCD_4_BIT_MODE);
   Lcd_cursor(&lcd, 0,1);
-  Lcd_string(&lcd, "SIRISHA REDDY");
+  Lcd_string(&lcd, "PRATHYUSHA.Y");
   while (1)
   {
     
