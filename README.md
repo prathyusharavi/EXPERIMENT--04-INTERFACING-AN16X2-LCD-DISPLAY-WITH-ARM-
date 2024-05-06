@@ -209,8 +209,6 @@ int main(void)
 
 
 ## Output screen shots of proteus  :
-LCD OFF :
-![image](https://github.com/prathyusharavi/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/147474424/8112f838-e3e3-44b1-9a12-fb84b9c824f5)
 LCD ON :
 ![Screenshot 2024-04-01 063042](https://github.com/prathyusharavi/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/147474424/73809aa7-33d8-49a0-b2e2-21d0edd0a5e6)
 
