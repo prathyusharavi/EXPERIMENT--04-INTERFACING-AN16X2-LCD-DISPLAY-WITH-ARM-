@@ -179,111 +179,48 @@ REF NO:212223240187
 #include "main.h"
 #include "lcd.h"
 
-
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
-/* USER CODE END Includes */
-
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE BEGIN PV */
-
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-/* USER CODE BEGIN PFP */
-
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  
   HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
   SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
   Lcd_PortType ports[] = { GPIOA, GPIOA, GPIOA, GPIOA };
   Lcd_PinType pins[] = {GPIO_PIN_3, GPIO_PIN_2, GPIO_PIN_1, GPIO_PIN_0};
   Lcd_HandleTypeDef lcd;
   lcd = Lcd_create(ports, pins, GPIOB, GPIO_PIN_0, GPIOB, GPIO_PIN_1, LCD_4_BIT_MODE);
   Lcd_cursor(&lcd, 0,1);
-  Lcd_string(&lcd, "Archana");
-
+  Lcd_string(&lcd, "SIRISHA REDDY");
   while (1)
   {
-    /* USER CODE END WHILE */
+    
 	  for ( int x = 1; x <= 200 ; x++ )
-	 	  {
-		  Lcd_cursor(&lcd, 1,7);
-	 	  Lcd_int(&lcd, x);
-	 	  HAL_Delay (1000);
-	 	  }
-    /* USER CODE BEGIN 3 */
+	  {
+	  	   		  Lcd_cursor(&lcd, 1,7);
+	  	   	 	  Lcd_int(&lcd, x);
+	  	   	 	  HAL_Delay (1000);
+	  }
+
+
   }
-  /* USER CODE END 3 */
+
 }
 ```
 
 
-
 ## Output screen shots of proteus  :
-![image](https://github.com/prathyusharavi/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/147474424/f82daad5-9c96-4e53-8647-fcf0d7f7847c)
+LCD OFF :
+![image](https://github.com/prathyusharavi/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/147474424/8112f838-e3e3-44b1-9a12-fb84b9c824f5)
+LCD ON :
+![Screenshot 2024-04-01 063042](https://github.com/prathyusharavi/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/147474424/73809aa7-33d8-49a0-b2e2-21d0edd0a5e6)
 
  
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- ![image](https://github.com/prathyusharavi/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/147474424/8fa2f349-1603-4e15-91e0-b5dc4f7d157d)
+![image](https://github.com/prathyusharavi/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/147474424/0471c9ee-fccd-471b-9db3-676d7e6e4225)
 
- 
  
 ## Result :
 Interfacing a lcd display with ARM microcontroller are simulated in proteus and the results are verified.
